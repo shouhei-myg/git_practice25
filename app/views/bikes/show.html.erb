@@ -1,0 +1,7 @@
+<h1>達也さんの一言</h1>
+<%= form_for(@bike) do |f| %>
+  <td><%= @bike.title %></td>
+<br>
+  <td><%= @bike.content %></td><br>
+<% end %>
+<%= link_to '戻る', bikes_path %>

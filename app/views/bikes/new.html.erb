@@ -1,0 +1,15 @@
+<h1>達也さんの一言</h1>
+<%= form_for(@bike) do |f| %>
+  <div><%= f.label :title %></div>
+  <div><%= f.text_field :title %></div>
+  <div><%= f.label :content %></div>
+  <div><%= f.text_field :content %></div>
+  <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', bikes_path %><br />
+<% if @bike.errors.any? %>
+  <%= @bike.errors.count %>件のエラーが発生しました
+  <% @bike.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>笹川さんの一言</h1>
+<%= form_for(@task) do |f| %>
+  <td><%= @task.title %></td>
+<br>
+  <td><%= @task.content %></td><br>
+<% end %>
+<%= link_to '戻る', tasks_path %>

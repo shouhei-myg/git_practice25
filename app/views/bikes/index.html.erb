@@ -1,0 +1,21 @@
+<h1>奇跡の一言</h1>
+<p>宮城です。</p>
+<h2>達也さんの1日</h2>
+<table>
+  <thead>
+    <tr>
+      <th>達也さんの一言</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bikes.each do |bike| %>
+      <tr>
+        <td><%= bike.title %></td>
+        <td><%= link_to '詳細', bike_path(bike) %></td>
+        <td><%= link_to '編集', edit_bike_path(bike) %></td>
+        <td><%= link_to '削除', bike_path(bike), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to '追加', new_bike_path %>
